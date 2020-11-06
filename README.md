@@ -12,7 +12,5 @@ Use this GitHub Action to [set context for Alibaba Cloud Container Service for K
 
 Refer to the action metadata file for details about all the inputs: [action.yml](https://github.com/denverdino/ack-set-context/blob/master/action.yml)
 
-```
-
 ### Prerequisite
 Get the access-key-id and access-key-secret of Alibaba Cloud and add them as as [secrets](https://developer.github.com/actions/managing-workflows/storing-secrets/) in the GitHub repository.
