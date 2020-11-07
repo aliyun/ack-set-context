@@ -1,6 +1,4 @@
 const core = require('@actions/core');
-const io = require('@actions/io');
-const os = require('os');
 
 const path = require('path');
 const fs = require('fs');
@@ -22,12 +20,14 @@ async function run() {
             apiVersion: '2015-12-15'
         });
         let result = await client.request('GET', `/k8s/${clusterId}/user_config`)
-        let config = result.config
-        const dirPath = path.join(os.homedir(), '.kube');
-        await io.mkdirP(dirPath);
-        const kubeConfigPath = path.join(dirPath, `config`);
-        fs.writeFileSync(kubeConfigPath, config, {mode: 0o600});
-        core.debug(`kubeconfig file is saved to ${kubeConfigPath}`);
+        let kubeconfig = result.config
+        const runnerTempDirectory = process.env['RUNNER_TEMP']; // Using process.env until the core libs are updated
+        const kubeconfigPath = path.join(runnerTempDirectory, `kubeconfig_${Date.now()}`);
+        core.debug(`Writing kubeconfig contents to ${kubeconfigPath}`);
+        fs.writeFileSync(kubeconfigPath, kubeconfig);
+        fs.chmodSync(kubeconfigPath, '600');
+        core.exportVariable('KUBECONFIG', kubeconfigPath);
+        console.log('KUBECONFIG environment variable is set');
     } catch (err) {
         core.setFailed(`Failed to get kubeconfig file for Kubernetes cluster: ${err}`);
     }

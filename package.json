@@ -28,7 +28,6 @@
     "homepage": "https://github.com/denverdino/ack-set-context#readme",
     "dependencies": {
         "@actions/core": "^1.2.6",
-        "@actions/io": "^1.0.2",
         "@alicloud/pop-core": "^1.7.10"
     },
     "devDependencies": {
