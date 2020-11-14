@@ -1,4 +1,4 @@
-name: 'Setting context for Alibaba Cloud Container Service for Kubernetes (ACK)'
+name: 'Setting context for Kubernetes cluster of Alibaba Cloud Kubernetes Service (ACK)'
 description: 'Log in to a container registry'
 inputs: 
   access-key-id:
