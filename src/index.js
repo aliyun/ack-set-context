@@ -8,14 +8,16 @@ const ROAClient = require('@alicloud/pop-core').ROAClient;
 const APIEndpoint = `https://cs.aliyuncs.com`
 
 async function run() {
-    let accessKeyId = core.getInput('access-key-id', { required: false });
-    let accessKeySecret = core.getInput('access-key-secret', { required: false });
+    let accessKeyId = core.getInput('access-key-id', { required: true });
+    let accessKeySecret = core.getInput('access-key-secret', { required: true });
+    let securityToken = core.getInput('security-token', { required: false });
     let clusterId = core.getInput('cluster-id', { required: false });
 
     try {
         let client = new ROAClient({
             accessKeyId,
             accessKeySecret,
+            securityToken,
             endpoint: APIEndpoint,
             apiVersion: '2015-12-15'
         });

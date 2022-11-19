@@ -1,5 +1,5 @@
 name: 'Setting context for Kubernetes cluster of Alibaba Cloud Kubernetes Service (ACK)'
-description: 'Log in to a container registry'
+description: 'Setting context for Kubernetes cluster of Alibaba Cloud Kubernetes Service (ACK)'
 inputs: 
   access-key-id:
     description: 'Access key id for Alibaba Cloud'
@@ -7,6 +7,10 @@ inputs:
   access-key-secret:
     description: 'Access key secret for Alibaba Cloud'
     required: true
+  security-token:
+    description: 'STS token for Alibaba Cloud'
+    default: ''
+    required: false
   cluster-id:
     description: 'Kubernetes cluster id'
     required: true
