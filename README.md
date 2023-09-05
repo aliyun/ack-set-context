@@ -19,4 +19,5 @@ Set the ```KUBECONFIG``` environment variable by cluster id for K8s cluster mana
 Refer to the action metadata file for details about all the inputs: [action.yml](https://github.com/aliyun/ack-set-context/blob/master/action.yml)
 
 ### Prerequisite
-Get the access-key-id and access-key-secret of Alibaba Cloud and add them as as [secrets](https://developer.github.com/actions/managing-workflows/storing-secrets/) in the GitHub repository.
+1. Get the access-key-id and access-key-secret of Alibaba Cloud and add them as [secrets](https://developer.github.com/actions/managing-workflows/storing-secrets/) in the GitHub repository.
+2. If is `ackone`, the AK/SK permissions need to be minimized, please refer to [Grant permissions to a RAM user](https://www.alibabacloud.com/help/en/ack/distributed-cloud-container-platform-for-kubernetes/user-guide/grant-permissions-to-a-ram-user-1?spm=a2c63.p38356.0.0.60f81fd4if2ccM) to configure `AliyunAdcpReadOnlyAccess` RAM permissions and `admin` RBAC role.
