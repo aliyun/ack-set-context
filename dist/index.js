@@ -16301,7 +16301,7 @@ async function run() {
 
     try {
         let kubeconfig = ""
-        if (clusterType === "ackone") { // get ACK One Hub Cluster kubeconfig
+        if (clusterType.toLocaleLowerCase() === "one") { // get ACK One Hub Cluster kubeconfig
             kubeconfig = await getAckOneHubKubeconfig(accessKeyId, accessKeySecret, securityToken, APIEndpointAdcp, clusterId)
         } else { // get ACK Cluster kubeconfig
             let client = new ROAClient({
