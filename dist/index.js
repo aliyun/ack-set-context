@@ -1,7 +1,7 @@
-require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 7351:
+/***/ 9165:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -28,7 +28,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.issue = exports.issueCommand = void 0;
 const os = __importStar(__nccwpck_require__(2037));
-const utils_1 = __nccwpck_require__(5278);
+const utils_1 = __nccwpck_require__(798);
 /**
  * Commands
  *
@@ -100,7 +100,7 @@ function escapeProperty(s) {
 
 /***/ }),
 
-/***/ 2186:
+/***/ 8864:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -135,12 +135,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getIDToken = exports.getState = exports.saveState = exports.group = exports.endGroup = exports.startGroup = exports.info = exports.notice = exports.warning = exports.error = exports.debug = exports.isDebug = exports.setFailed = exports.setCommandEcho = exports.setOutput = exports.getBooleanInput = exports.getMultilineInput = exports.getInput = exports.addPath = exports.setSecret = exports.exportVariable = exports.ExitCode = void 0;
-const command_1 = __nccwpck_require__(7351);
-const file_command_1 = __nccwpck_require__(717);
-const utils_1 = __nccwpck_require__(5278);
+const command_1 = __nccwpck_require__(9165);
+const file_command_1 = __nccwpck_require__(6526);
+const utils_1 = __nccwpck_require__(798);
 const os = __importStar(__nccwpck_require__(2037));
 const path = __importStar(__nccwpck_require__(1017));
-const oidc_utils_1 = __nccwpck_require__(8041);
+const oidc_utils_1 = __nccwpck_require__(5912);
 /**
  * The code to exit an action
  */
@@ -425,17 +425,17 @@ exports.getIDToken = getIDToken;
 /**
  * Summary exports
  */
-var summary_1 = __nccwpck_require__(1327);
+var summary_1 = __nccwpck_require__(1499);
 Object.defineProperty(exports, "summary", ({ enumerable: true, get: function () { return summary_1.summary; } }));
 /**
  * @deprecated use core.summary
  */
-var summary_2 = __nccwpck_require__(1327);
+var summary_2 = __nccwpck_require__(1499);
 Object.defineProperty(exports, "markdownSummary", ({ enumerable: true, get: function () { return summary_2.markdownSummary; } }));
 /**
  * Path exports
  */
-var path_utils_1 = __nccwpck_require__(2981);
+var path_utils_1 = __nccwpck_require__(8942);
 Object.defineProperty(exports, "toPosixPath", ({ enumerable: true, get: function () { return path_utils_1.toPosixPath; } }));
 Object.defineProperty(exports, "toWin32Path", ({ enumerable: true, get: function () { return path_utils_1.toWin32Path; } }));
 Object.defineProperty(exports, "toPlatformPath", ({ enumerable: true, get: function () { return path_utils_1.toPlatformPath; } }));
@@ -443,7 +443,7 @@ Object.defineProperty(exports, "toPlatformPath", ({ enumerable: true, get: funct
 
 /***/ }),
 
-/***/ 717:
+/***/ 6526:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -474,8 +474,8 @@ exports.prepareKeyValueMessage = exports.issueFileCommand = void 0;
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const fs = __importStar(__nccwpck_require__(7147));
 const os = __importStar(__nccwpck_require__(2037));
-const uuid_1 = __nccwpck_require__(5840);
-const utils_1 = __nccwpck_require__(5278);
+const uuid_1 = __nccwpck_require__(6248);
+const utils_1 = __nccwpck_require__(798);
 function issueFileCommand(command, message) {
     const filePath = process.env[`GITHUB_${command}`];
     if (!filePath) {
@@ -508,7 +508,7 @@ exports.prepareKeyValueMessage = prepareKeyValueMessage;
 
 /***/ }),
 
-/***/ 8041:
+/***/ 5912:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -524,9 +524,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.OidcClient = void 0;
-const http_client_1 = __nccwpck_require__(6255);
-const auth_1 = __nccwpck_require__(5526);
-const core_1 = __nccwpck_require__(2186);
+const http_client_1 = __nccwpck_require__(8082);
+const auth_1 = __nccwpck_require__(8432);
+const core_1 = __nccwpck_require__(8864);
 class OidcClient {
     static createHttpClient(allowRetry = true, maxRetry = 10) {
         const requestOptions = {
@@ -592,7 +592,7 @@ exports.OidcClient = OidcClient;
 
 /***/ }),
 
-/***/ 2981:
+/***/ 8942:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -657,7 +657,7 @@ exports.toPlatformPath = toPlatformPath;
 
 /***/ }),
 
-/***/ 1327:
+/***/ 1499:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -947,7 +947,7 @@ exports.summary = _summary;
 
 /***/ }),
 
-/***/ 5278:
+/***/ 798:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -994,7 +994,7 @@ exports.toCommandProperties = toCommandProperties;
 
 /***/ }),
 
-/***/ 5526:
+/***/ 8432:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
@@ -1082,7 +1082,7 @@ exports.PersonalAccessTokenCredentialHandler = PersonalAccessTokenCredentialHand
 
 /***/ }),
 
-/***/ 6255:
+/***/ 8082:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -1120,8 +1120,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.HttpClient = exports.isHttps = exports.HttpClientResponse = exports.HttpClientError = exports.getProxyUrl = exports.MediaTypes = exports.Headers = exports.HttpCodes = void 0;
 const http = __importStar(__nccwpck_require__(3685));
 const https = __importStar(__nccwpck_require__(5687));
-const pm = __importStar(__nccwpck_require__(9835));
-const tunnel = __importStar(__nccwpck_require__(4294));
+const pm = __importStar(__nccwpck_require__(5307));
+const tunnel = __importStar(__nccwpck_require__(3357));
 var HttpCodes;
 (function (HttpCodes) {
     HttpCodes[HttpCodes["OK"] = 200] = "OK";
@@ -1694,7 +1694,7 @@ const lowercaseKeys = (obj) => Object.keys(obj).reduce((c, k) => ((c[k.toLowerCa
 
 /***/ }),
 
-/***/ 9835:
+/***/ 5307:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -1762,20 +1762,20 @@ exports.checkBypass = checkBypass;
 
 /***/ }),
 
-/***/ 8634:
+/***/ 7730:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-module.exports = __nccwpck_require__(3528);
-module.exports.ROAClient = __nccwpck_require__(5017);
-/* unused reexport */ __nccwpck_require__(3528);
+module.exports = __nccwpck_require__(7577);
+module.exports.ROAClient = __nccwpck_require__(6358);
+module.exports.RPCClient = __nccwpck_require__(7577);
 
 
 /***/ }),
 
-/***/ 8251:
+/***/ 8062:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -1792,7 +1792,7 @@ exports.DEFAULT_CLIENT = `Node.js(${process.version}), ${pkg.name}: ${pkg.versio
 
 /***/ }),
 
-/***/ 5017:
+/***/ 6358:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -1802,13 +1802,13 @@ const assert = __nccwpck_require__(9491);
 const url = __nccwpck_require__(7310);
 const querystring = __nccwpck_require__(3477);
 
-const kitx = __nccwpck_require__(8683);
-const httpx = __nccwpck_require__(9074);
-const xml2js = __nccwpck_require__(6189);
-const JSON = __nccwpck_require__(5031);
-const debug = __nccwpck_require__(8237)('roa');
+const kitx = __nccwpck_require__(7901);
+const httpx = __nccwpck_require__(362);
+const xml2js = __nccwpck_require__(6723);
+const JSON = __nccwpck_require__(7907);
+const debug = __nccwpck_require__(583)('roa');
 
-const helper = __nccwpck_require__(8251);
+const helper = __nccwpck_require__(8062);
 
 function filter(value) {
   return value.replace(/[\t\n\r\f]/g, ' ');
@@ -1921,10 +1921,7 @@ class ROAClient {
     this.accessKeyId = config.accessKeyId;
     this.accessKeySecret = config.accessKeySecret;
     this.securityToken = config.securityToken;
-    const parsed = url.parse(this.endpoint);
-    this.host = parsed.hostname;
-    this.protocol = parsed.protocol;
-    this.port = parsed.port;
+    this.host = url.parse(this.endpoint).hostname;
     this.opts = config.opts;
     var httpModule = this.endpoint.startsWith('https://') ? __nccwpck_require__(5687) : __nccwpck_require__(3685);
     this.keepAliveAgent = new httpModule.Agent({
@@ -1963,7 +1960,7 @@ class ROAClient {
     return `acs ${this.accessKeyId}:${this.signature(stringToSign)}`;
   }
 
-  request(method, uriPattern, query = {}, body = '', headers = {}, opts = {}) {
+  async request(method, uriPattern, query = {}, body = '', headers = {}, opts = {}) {
     var postBody = null;
 
     var mixHeaders = Object.assign(this.buildHeaders(), keyLowerify(headers));
@@ -1971,7 +1968,7 @@ class ROAClient {
     mixHeaders['content-md5'] = kitx.md5(postBody, 'base64');
     mixHeaders['content-length'] = postBody.length;
 
-    let url = `${this.protocol}//${this.aclIp ? this.aclIp : this.host}${this.port ? ':' + this.port : ''}${uriPattern}`;
+    var url = `${this.endpoint}${uriPattern}`;
     if (Object.keys(query).length) {
       url += `?${querystring.stringify(query)}`;
     }
@@ -1987,59 +1984,57 @@ class ROAClient {
       data: postBody
     }, this.opts, opts);
 
-    return httpx.request(url, options).then((response) => {
-      return httpx.read(response, 'utf8').then((body) => {
-        // Retrun raw body
-        if (opts.rawBody) {
-          return body;
-        }
+    const response = await httpx.request(url, options);
+    const responseBody = await httpx.read(response, 'utf8');
 
-        const contentType = response.headers['content-type'] || '';
-        // JSON
-        if (contentType.startsWith('application/json')) {
-          const statusCode = response.statusCode;
-          if (statusCode === 204) {
-            return body;
-          }
+    // Retrun raw body
+    if (opts.rawBody) {
+      return responseBody;
+    }
 
-          var result;
-          try {
-            result = JSON.parse(body);
-          } catch (err) {
-            err.name = 'FormatError';
-            err.message = 'parse response to json error';
-            err.body = body;
-            throw err;
-          }
+    const contentType = response.headers['content-type'] || '';
+    // JSON
+    if (contentType.startsWith('application/json')) {
+      const statusCode = response.statusCode;
+      if (statusCode === 204) {
+        return responseBody;
+      }
 
-          if (statusCode >= 400) {
-            const errorMessage = result.Message || result.errorMsg || '';
-            const errorCode = result.Code || result.errorCode || '';
-            const requestId = result.RequestId || '';
-            var err = new Error(`code: ${statusCode}, ${errorMessage}, requestid: ${requestId}`);
-            err.name = `${errorCode}Error`;
-            err.statusCode = statusCode;
-            err.result = result;
-            err.code = errorCode;
-            throw err;
-          }
+      var result;
+      try {
+        result = JSON.parse(responseBody);
+      } catch (err) {
+        err.name = 'FormatError';
+        err.message = 'parse response to json error';
+        err.body = responseBody;
+        throw err;
+      }
 
-          return result;
-        }
+      if (statusCode >= 400) {
+        const errorMessage = result.Message || result.errorMsg || '';
+        const errorCode = result.Code || result.errorCode || '';
+        const requestId = result.RequestId || '';
+        var err = new Error(`code: ${statusCode}, ${errorMessage}, requestid: ${requestId}`);
+        err.name = `${errorCode}Error`;
+        err.statusCode = statusCode;
+        err.result = result;
+        err.code = errorCode;
+        throw err;
+      }
 
-        if (contentType.startsWith('text/xml')) {
-          return parseXML(body).then((result) => {
-            if (result.Error) {
-              throw new ACSError(result.Error);
-            }
+      return result;
+    }
 
-            return result;
-          });
-        }
+    if (contentType.startsWith('text/xml')) {
+      const result = await parseXML(responseBody);
+      if (result.Error) {
+        throw new ACSError(result.Error);
+      }
 
-        return body;
-      });
-    });
+      return result;
+    }
+
+    return responseBody;
   }
 
   put(path, query, body, headers, options) {
@@ -2064,7 +2059,7 @@ module.exports = ROAClient;
 
 /***/ }),
 
-/***/ 3528:
+/***/ 7577:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2072,11 +2067,11 @@ module.exports = ROAClient;
 
 const assert = __nccwpck_require__(9491);
 
-const httpx = __nccwpck_require__(9074);
-const kitx = __nccwpck_require__(8683);
-const JSON = __nccwpck_require__(5031);
+const httpx = __nccwpck_require__(362);
+const kitx = __nccwpck_require__(7901);
+const JSON = __nccwpck_require__(7907);
 
-const helper = __nccwpck_require__(8251);
+const helper = __nccwpck_require__(8062);
 
 function firstLetterUpper(str) {
   return str.slice(0, 1).toUpperCase() + str.slice(1);
@@ -2214,7 +2209,7 @@ class RPCClient {
     });
   }
 
-  request(action, params = {}, opts = {}) {
+  async request(action, params = {}, opts = {}) {
     // 1. compose params and opts
     opts = Object.assign({
       headers: {
@@ -2234,24 +2229,24 @@ class RPCClient {
     if (opts.formatParams !== false) {
       params = formatParams(params);
     }
-    var defaults = this._buildParams();
+    const defaults = this._buildParams();
     params = Object.assign({Action: action}, defaults, params);
 
     // 2. caculate signature
-    var method = (opts.method || 'GET').toUpperCase();
-    var normalized = normalize(params);
-    var canonicalized = canonicalize(normalized);
+    const method = (opts.method || 'GET').toUpperCase();
+    const normalized = normalize(params);
+    const canonicalized = canonicalize(normalized);
     // 2.1 get string to sign
-    var stringToSign = `${method}&${encode('/')}&${encode(canonicalized)}`;
+    const stringToSign = `${method}&${encode('/')}&${encode(canonicalized)}`;
     // 2.2 get signature
     const key = this.accessKeySecret + '&';
-    var signature = kitx.sha1(stringToSign, key, 'base64');
+    const signature = kitx.sha1(stringToSign, key, 'base64');
     // add signature
     normalized.push(['Signature', encode(signature)]);
     // 3. generate final url
     const url = opts.method === 'POST' ? `${this.endpoint}/` : `${this.endpoint}/?${canonicalize(normalized)}`;
     // 4. send request
-    var entry = {
+    const entry = {
       url: url,
       request: null,
       response: null
@@ -2267,38 +2262,36 @@ class RPCClient {
       opts.data = canonicalize(normalized);
     }
 
-    return httpx.request(url, opts).then((response) => {
-      entry.request = {
-        headers: response.req.getHeaders ? response.req.getHeaders() : response.req._headers
-      };
-      entry.response = {
-        statusCode: response.statusCode,
-        headers: response.headers
-      };
+    const response = await httpx.request(url, opts);
+    entry.request = {
+      headers: response.req.getHeaders ? response.req.getHeaders() : response.req._headers
+    };
+    entry.response = {
+      statusCode: response.statusCode,
+      headers: response.headers
+    };
 
-      return httpx.read(response);
-    }).then((buffer) => {
-      var json = JSON.parse(buffer);
-      if (json.Code && !this.codes.has(json.Code)) {
-        var err = new Error(`${json.Message}, URL: ${url}`);
-        err.name = json.Code + 'Error';
-        err.data = json;
-        err.code = json.Code;
-        err.url = url;
-        err.entry = entry;
-        return Promise.reject(err);
-      }
+    const buffer = await httpx.read(response);
+    const json = JSON.parse(buffer);
+    if (json.Code && !this.codes.has(json.Code)) {
+      const err = new Error(`${json.Message}, URL: ${url}`);
+      err.name = json.Code + 'Error';
+      err.data = json;
+      err.code = json.Code;
+      err.url = url;
+      err.entry = entry;
+      throw err;
+    }
 
-      if (this.verbose) {
-        return [json, entry];
-      }
+    if (this.verbose) {
+      return [json, entry];
+    }
 
-      return json;
-    });
+    return json;
   }
 
   _buildParams() {
-    var defaultParams = {
+    const defaultParams = {
       Format: 'JSON',
       SignatureMethod: 'HMAC-SHA1',
       SignatureNonce: kitx.makeNonce(),
@@ -2319,7 +2312,7 @@ module.exports = RPCClient;
 
 /***/ }),
 
-/***/ 7558:
+/***/ 3524:
 /***/ (function(module) {
 
 ;(function (globalObject) {
@@ -5252,7 +5245,7 @@ module.exports = RPCClient;
 
 /***/ }),
 
-/***/ 8222:
+/***/ 9349:
 /***/ ((module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5422,7 +5415,7 @@ function localstorage() {
   }
 }
 
-module.exports = __nccwpck_require__(6243)(exports);
+module.exports = __nccwpck_require__(7000)(exports);
 var formatters = module.exports.formatters;
 /**
  * Map %j to `JSON.stringify()`, since no Web Inspectors do that by default.
@@ -5440,7 +5433,7 @@ formatters.j = function (v) {
 
 /***/ }),
 
-/***/ 6243:
+/***/ 7000:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5457,7 +5450,7 @@ function setup(env) {
   createDebug.disable = disable;
   createDebug.enable = enable;
   createDebug.enabled = enabled;
-  createDebug.humanize = __nccwpck_require__(900);
+  createDebug.humanize = __nccwpck_require__(9093);
   Object.keys(env).forEach(function (key) {
     createDebug[key] = env[key];
   });
@@ -5697,7 +5690,7 @@ module.exports = setup;
 
 /***/ }),
 
-/***/ 8237:
+/***/ 583:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5708,16 +5701,16 @@ module.exports = setup;
  * treat as a browser.
  */
 if (typeof process === 'undefined' || process.type === 'renderer' || process.browser === true || process.__nwjs) {
-  module.exports = __nccwpck_require__(8222);
+  module.exports = __nccwpck_require__(9349);
 } else {
-  module.exports = __nccwpck_require__(4874);
+  module.exports = __nccwpck_require__(4797);
 }
 
 
 
 /***/ }),
 
-/***/ 4874:
+/***/ 4797:
 /***/ ((module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5749,7 +5742,7 @@ exports.colors = [6, 2, 3, 4, 5, 1];
 try {
   // Optional dependency (as in, doesn't need to be installed, NOT like optionalDependencies in package.json)
   // eslint-disable-next-line import/no-extraneous-dependencies
-  var supportsColor = __nccwpck_require__(9318);
+  var supportsColor = __nccwpck_require__(1286);
 
   if (supportsColor && (supportsColor.stderr || supportsColor).level >= 2) {
     exports.colors = [20, 21, 26, 27, 32, 33, 38, 39, 40, 41, 42, 43, 44, 45, 56, 57, 62, 63, 68, 69, 74, 75, 76, 77, 78, 79, 80, 81, 92, 93, 98, 99, 112, 113, 128, 129, 134, 135, 148, 149, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 178, 179, 184, 185, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 214, 215, 220, 221];
@@ -5875,7 +5868,7 @@ function init(debug) {
   }
 }
 
-module.exports = __nccwpck_require__(6243)(exports);
+module.exports = __nccwpck_require__(7000)(exports);
 var formatters = module.exports.formatters;
 /**
  * Map %o to `util.inspect()`, all on a single line.
@@ -5902,7 +5895,7 @@ formatters.O = function (v) {
 
 /***/ }),
 
-/***/ 1621:
+/***/ 8300:
 /***/ ((module) => {
 
 "use strict";
@@ -5918,7 +5911,7 @@ module.exports = (flag, argv = process.argv) => {
 
 /***/ }),
 
-/***/ 9074:
+/***/ 362:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5930,8 +5923,8 @@ const https = __nccwpck_require__(5687);
 const parse = (__nccwpck_require__(7310).parse);
 const format = (__nccwpck_require__(7310).format);
 
-const debugBody = __nccwpck_require__(1948)('httpx:body');
-const debugHeader = __nccwpck_require__(1948)('httpx:header');
+const debugBody = __nccwpck_require__(7661)('httpx:body');
+const debugHeader = __nccwpck_require__(7661)('httpx:header');
 
 const httpAgent = new http.Agent({ keepAlive: true });
 const httpsAgent = new https.Agent({ keepAlive: true });
@@ -6182,7 +6175,7 @@ exports.read = function (response, encoding) {
 
 /***/ }),
 
-/***/ 261:
+/***/ 4786:
 /***/ ((module, exports, __nccwpck_require__) => {
 
 /* eslint-env browser */
@@ -6439,7 +6432,7 @@ function localstorage() {
 	}
 }
 
-module.exports = __nccwpck_require__(5538)(exports);
+module.exports = __nccwpck_require__(8951)(exports);
 
 const {formatters} = module.exports;
 
@@ -6458,7 +6451,7 @@ formatters.j = function (v) {
 
 /***/ }),
 
-/***/ 5538:
+/***/ 8951:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 
@@ -6474,7 +6467,7 @@ function setup(env) {
 	createDebug.disable = disable;
 	createDebug.enable = enable;
 	createDebug.enabled = enabled;
-	createDebug.humanize = __nccwpck_require__(2823);
+	createDebug.humanize = __nccwpck_require__(5183);
 	createDebug.destroy = destroy;
 
 	Object.keys(env).forEach(key => {
@@ -6739,7 +6732,7 @@ module.exports = setup;
 
 /***/ }),
 
-/***/ 1948:
+/***/ 7661:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 /**
@@ -6748,15 +6741,15 @@ module.exports = setup;
  */
 
 if (typeof process === 'undefined' || process.type === 'renderer' || process.browser === true || process.__nwjs) {
-	module.exports = __nccwpck_require__(261);
+	module.exports = __nccwpck_require__(4786);
 } else {
-	module.exports = __nccwpck_require__(6072);
+	module.exports = __nccwpck_require__(1705);
 }
 
 
 /***/ }),
 
-/***/ 6072:
+/***/ 1705:
 /***/ ((module, exports, __nccwpck_require__) => {
 
 /**
@@ -6790,7 +6783,7 @@ exports.colors = [6, 2, 3, 4, 5, 1];
 try {
 	// Optional dependency (as in, doesn't need to be installed, NOT like optionalDependencies in package.json)
 	// eslint-disable-next-line import/no-extraneous-dependencies
-	const supportsColor = __nccwpck_require__(9318);
+	const supportsColor = __nccwpck_require__(1286);
 
 	if (supportsColor && (supportsColor.stderr || supportsColor).level >= 2) {
 		exports.colors = [
@@ -6998,7 +6991,7 @@ function init(debug) {
 	}
 }
 
-module.exports = __nccwpck_require__(5538)(exports);
+module.exports = __nccwpck_require__(8951)(exports);
 
 const {formatters} = module.exports;
 
@@ -7026,7 +7019,7 @@ formatters.O = function (v) {
 
 /***/ }),
 
-/***/ 2823:
+/***/ 5183:
 /***/ ((module) => {
 
 /**
@@ -7195,11 +7188,11 @@ function plural(ms, msAbs, n, name) {
 
 /***/ }),
 
-/***/ 5031:
+/***/ 7907:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-var json_stringify = (__nccwpck_require__(8574).stringify);
-var json_parse     = __nccwpck_require__(9099);
+var json_stringify = (__nccwpck_require__(7504).stringify);
+var json_parse     = __nccwpck_require__(1618);
 
 module.exports = function(options) {
     return  {
@@ -7214,7 +7207,7 @@ module.exports.stringify = json_stringify;
 
 /***/ }),
 
-/***/ 9099:
+/***/ 1618:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var BigNumber = null;
@@ -7424,7 +7417,7 @@ var json_parse = function (options) {
       if (!isFinite(number)) {
         error('Bad number');
       } else {
-        if (BigNumber == null) BigNumber = __nccwpck_require__(7558);
+        if (BigNumber == null) BigNumber = __nccwpck_require__(3524);
         //if (number > 9007199254740992 || number < -9007199254740992)
         // Bignumber has stricter check: everything with length > 15 digits disallowed
         if (string.length > 15)
@@ -7664,10 +7657,10 @@ module.exports = json_parse;
 
 /***/ }),
 
-/***/ 8574:
+/***/ 7504:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-var BigNumber = __nccwpck_require__(7558);
+var BigNumber = __nccwpck_require__(3524);
 
 /*
     json2.js
@@ -8055,7 +8048,7 @@ var JSON = module.exports;
 
 /***/ }),
 
-/***/ 8683:
+/***/ 7901:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8276,7 +8269,7 @@ exports.getMac = function () {
 
 /***/ }),
 
-/***/ 900:
+/***/ 9093:
 /***/ ((module) => {
 
 /**
@@ -8445,7 +8438,7 @@ function plural(ms, msAbs, n, name) {
 
 /***/ }),
 
-/***/ 2043:
+/***/ 9878:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 ;(function (sax) { // wrapper for non-node envs
@@ -10017,14 +10010,14 @@ function plural(ms, msAbs, n, name) {
 
 /***/ }),
 
-/***/ 9318:
+/***/ 1286:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 const os = __nccwpck_require__(2037);
 const tty = __nccwpck_require__(6224);
-const hasFlag = __nccwpck_require__(1621);
+const hasFlag = __nccwpck_require__(8300);
 
 const {env} = process;
 
@@ -10160,15 +10153,15 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4294:
+/***/ 3357:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-module.exports = __nccwpck_require__(4219);
+module.exports = __nccwpck_require__(2096);
 
 
 /***/ }),
 
-/***/ 4219:
+/***/ 2096:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10440,7 +10433,7 @@ exports.debug = debug; // for test
 
 /***/ }),
 
-/***/ 5840:
+/***/ 6248:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10504,29 +10497,29 @@ Object.defineProperty(exports, "parse", ({
   }
 }));
 
-var _v = _interopRequireDefault(__nccwpck_require__(8628));
+var _v = _interopRequireDefault(__nccwpck_require__(2890));
 
-var _v2 = _interopRequireDefault(__nccwpck_require__(6409));
+var _v2 = _interopRequireDefault(__nccwpck_require__(8267));
 
-var _v3 = _interopRequireDefault(__nccwpck_require__(5122));
+var _v3 = _interopRequireDefault(__nccwpck_require__(9445));
 
-var _v4 = _interopRequireDefault(__nccwpck_require__(9120));
+var _v4 = _interopRequireDefault(__nccwpck_require__(6456));
 
-var _nil = _interopRequireDefault(__nccwpck_require__(5332));
+var _nil = _interopRequireDefault(__nccwpck_require__(8578));
 
-var _version = _interopRequireDefault(__nccwpck_require__(1595));
+var _version = _interopRequireDefault(__nccwpck_require__(4947));
 
-var _validate = _interopRequireDefault(__nccwpck_require__(6900));
+var _validate = _interopRequireDefault(__nccwpck_require__(957));
 
-var _stringify = _interopRequireDefault(__nccwpck_require__(8950));
+var _stringify = _interopRequireDefault(__nccwpck_require__(4381));
 
-var _parse = _interopRequireDefault(__nccwpck_require__(2746));
+var _parse = _interopRequireDefault(__nccwpck_require__(5095));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 
-/***/ 4569:
+/***/ 1068:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10556,7 +10549,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 5332:
+/***/ 8578:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -10571,7 +10564,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 2746:
+/***/ 5095:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10582,7 +10575,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _validate = _interopRequireDefault(__nccwpck_require__(6900));
+var _validate = _interopRequireDefault(__nccwpck_require__(957));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10623,7 +10616,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 814:
+/***/ 8339:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -10638,7 +10631,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 807:
+/***/ 5779:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10669,7 +10662,7 @@ function rng() {
 
 /***/ }),
 
-/***/ 5274:
+/***/ 2453:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10699,7 +10692,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 8950:
+/***/ 4381:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10710,7 +10703,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _validate = _interopRequireDefault(__nccwpck_require__(6900));
+var _validate = _interopRequireDefault(__nccwpck_require__(957));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10745,7 +10738,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 8628:
+/***/ 2890:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10756,9 +10749,9 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _rng = _interopRequireDefault(__nccwpck_require__(807));
+var _rng = _interopRequireDefault(__nccwpck_require__(5779));
 
-var _stringify = _interopRequireDefault(__nccwpck_require__(8950));
+var _stringify = _interopRequireDefault(__nccwpck_require__(4381));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10859,7 +10852,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 6409:
+/***/ 8267:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10870,9 +10863,9 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _v = _interopRequireDefault(__nccwpck_require__(5998));
+var _v = _interopRequireDefault(__nccwpck_require__(678));
 
-var _md = _interopRequireDefault(__nccwpck_require__(4569));
+var _md = _interopRequireDefault(__nccwpck_require__(1068));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10882,7 +10875,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 5998:
+/***/ 678:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10894,9 +10887,9 @@ Object.defineProperty(exports, "__esModule", ({
 exports["default"] = _default;
 exports.URL = exports.DNS = void 0;
 
-var _stringify = _interopRequireDefault(__nccwpck_require__(8950));
+var _stringify = _interopRequireDefault(__nccwpck_require__(4381));
 
-var _parse = _interopRequireDefault(__nccwpck_require__(2746));
+var _parse = _interopRequireDefault(__nccwpck_require__(5095));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10967,7 +10960,7 @@ function _default(name, version, hashfunc) {
 
 /***/ }),
 
-/***/ 5122:
+/***/ 9445:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10978,9 +10971,9 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _rng = _interopRequireDefault(__nccwpck_require__(807));
+var _rng = _interopRequireDefault(__nccwpck_require__(5779));
 
-var _stringify = _interopRequireDefault(__nccwpck_require__(8950));
+var _stringify = _interopRequireDefault(__nccwpck_require__(4381));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11011,7 +11004,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 9120:
+/***/ 6456:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -11022,9 +11015,9 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _v = _interopRequireDefault(__nccwpck_require__(5998));
+var _v = _interopRequireDefault(__nccwpck_require__(678));
 
-var _sha = _interopRequireDefault(__nccwpck_require__(5274));
+var _sha = _interopRequireDefault(__nccwpck_require__(2453));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11034,7 +11027,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 6900:
+/***/ 957:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -11045,7 +11038,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _regex = _interopRequireDefault(__nccwpck_require__(814));
+var _regex = _interopRequireDefault(__nccwpck_require__(8339));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11058,7 +11051,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 1595:
+/***/ 4947:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -11069,7 +11062,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = void 0;
 
-var _validate = _interopRequireDefault(__nccwpck_require__(6900));
+var _validate = _interopRequireDefault(__nccwpck_require__(957));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11086,7 +11079,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 2624:
+/***/ 6475:
 /***/ (function(__unused_webpack_module, exports) {
 
 // Generated by CoffeeScript 1.12.7
@@ -11105,7 +11098,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 3337:
+/***/ 2176:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -11114,9 +11107,9 @@ exports["default"] = _default;
   var builder, defaults, escapeCDATA, requiresCDATA, wrapCDATA,
     hasProp = {}.hasOwnProperty;
 
-  builder = __nccwpck_require__(2958);
+  builder = __nccwpck_require__(255);
 
-  defaults = (__nccwpck_require__(7251).defaults);
+  defaults = (__nccwpck_require__(5124).defaults);
 
   requiresCDATA = function(entry) {
     return typeof entry === "string" && (entry.indexOf('&') >= 0 || entry.indexOf('>') >= 0 || entry.indexOf('<') >= 0);
@@ -11239,7 +11232,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 7251:
+/***/ 5124:
 /***/ (function(__unused_webpack_module, exports) {
 
 // Generated by CoffeeScript 1.12.7
@@ -11318,7 +11311,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 3314:
+/***/ 1011:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -11329,17 +11322,17 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  sax = __nccwpck_require__(2043);
+  sax = __nccwpck_require__(9878);
 
   events = __nccwpck_require__(2361);
 
-  bom = __nccwpck_require__(2624);
+  bom = __nccwpck_require__(6475);
 
-  processors = __nccwpck_require__(9236);
+  processors = __nccwpck_require__(9918);
 
   setImmediate = (__nccwpck_require__(9512).setImmediate);
 
-  defaults = (__nccwpck_require__(7251).defaults);
+  defaults = (__nccwpck_require__(5124).defaults);
 
   isEmpty = function(thing) {
     return typeof thing === "object" && (thing != null) && Object.keys(thing).length === 0;
@@ -11464,14 +11457,14 @@ exports["default"] = _default;
       this.saxParser.onopentag = (function(_this) {
         return function(node) {
           var key, newValue, obj, processedKey, ref;
-          obj = {};
+          obj = Object.create(null);
           obj[charkey] = "";
           if (!_this.options.ignoreAttrs) {
             ref = node.attributes;
             for (key in ref) {
               if (!hasProp.call(ref, key)) continue;
               if (!(attrkey in obj) && !_this.options.mergeAttrs) {
-                obj[attrkey] = {};
+                obj[attrkey] = Object.create(null);
               }
               newValue = _this.options.attrValueProcessors ? processItem(_this.options.attrValueProcessors, node.attributes[key], key) : node.attributes[key];
               processedKey = _this.options.attrNameProcessors ? processItem(_this.options.attrNameProcessors, key) : key;
@@ -11521,7 +11514,11 @@ exports["default"] = _default;
             }
           }
           if (isEmpty(obj)) {
-            obj = _this.options.emptyTag !== '' ? _this.options.emptyTag : emptyStr;
+            if (typeof _this.options.emptyTag === 'function') {
+              obj = _this.options.emptyTag();
+            } else {
+              obj = _this.options.emptyTag !== '' ? _this.options.emptyTag : emptyStr;
+            }
           }
           if (_this.options.validator != null) {
             xpath = "/" + ((function() {
@@ -11545,7 +11542,7 @@ exports["default"] = _default;
           }
           if (_this.options.explicitChildren && !_this.options.mergeAttrs && typeof obj === 'object') {
             if (!_this.options.preserveChildrenOrder) {
-              node = {};
+              node = Object.create(null);
               if (_this.options.attrkey in obj) {
                 node[_this.options.attrkey] = obj[_this.options.attrkey];
                 delete obj[_this.options.attrkey];
@@ -11560,7 +11557,7 @@ exports["default"] = _default;
               obj = node;
             } else if (s) {
               s[_this.options.childkey] = s[_this.options.childkey] || [];
-              objClone = {};
+              objClone = Object.create(null);
               for (key in obj) {
                 if (!hasProp.call(obj, key)) continue;
                 objClone[key] = obj[key];
@@ -11577,7 +11574,7 @@ exports["default"] = _default;
           } else {
             if (_this.options.explicitRoot) {
               old = obj;
-              obj = {};
+              obj = Object.create(null);
               obj[nodeName] = old;
             }
             _this.resultObject = obj;
@@ -11706,7 +11703,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 9236:
+/***/ 9918:
 /***/ (function(__unused_webpack_module, exports) {
 
 // Generated by CoffeeScript 1.12.7
@@ -11747,7 +11744,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 6189:
+/***/ 6723:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -11757,13 +11754,13 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  defaults = __nccwpck_require__(7251);
+  defaults = __nccwpck_require__(5124);
 
-  builder = __nccwpck_require__(3337);
+  builder = __nccwpck_require__(2176);
 
-  parser = __nccwpck_require__(3314);
+  parser = __nccwpck_require__(1011);
 
-  processors = __nccwpck_require__(9236);
+  processors = __nccwpck_require__(9918);
 
   exports.defaults = defaults.defaults;
 
@@ -11793,7 +11790,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 2839:
+/***/ 9439:
 /***/ (function(module) {
 
 // Generated by CoffeeScript 1.12.7
@@ -11812,7 +11809,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 9267:
+/***/ 2370:
 /***/ (function(module) {
 
 // Generated by CoffeeScript 1.12.7
@@ -11842,7 +11839,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 8229:
+/***/ 5060:
 /***/ (function(module) {
 
 // Generated by CoffeeScript 1.12.7
@@ -11932,7 +11929,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 9766:
+/***/ 6838:
 /***/ (function(module) {
 
 // Generated by CoffeeScript 1.12.7
@@ -11949,16 +11946,16 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 8376:
+/***/ 3281:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
 (function() {
   var NodeType, XMLAttribute, XMLNode;
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
-  XMLNode = __nccwpck_require__(7608);
+  XMLNode = __nccwpck_require__(956);
 
   module.exports = XMLAttribute = (function() {
     function XMLAttribute(parent, name, value) {
@@ -12064,7 +12061,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 333:
+/***/ 9721:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -12073,9 +12070,9 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
-  XMLCharacterData = __nccwpck_require__(7709);
+  XMLCharacterData = __nccwpck_require__(434);
 
   module.exports = XMLCData = (function(superClass) {
     extend(XMLCData, superClass);
@@ -12107,7 +12104,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 7709:
+/***/ 434:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -12116,7 +12113,7 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  XMLNode = __nccwpck_require__(7608);
+  XMLNode = __nccwpck_require__(956);
 
   module.exports = XMLCharacterData = (function(superClass) {
     extend(XMLCharacterData, superClass);
@@ -12193,7 +12190,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 4407:
+/***/ 2645:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -12202,9 +12199,9 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
-  XMLCharacterData = __nccwpck_require__(7709);
+  XMLCharacterData = __nccwpck_require__(434);
 
   module.exports = XMLComment = (function(superClass) {
     extend(XMLComment, superClass);
@@ -12236,16 +12233,16 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 7465:
+/***/ 137:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
 (function() {
   var XMLDOMConfiguration, XMLDOMErrorHandler, XMLDOMStringList;
 
-  XMLDOMErrorHandler = __nccwpck_require__(6744);
+  XMLDOMErrorHandler = __nccwpck_require__(3708);
 
-  XMLDOMStringList = __nccwpck_require__(7028);
+  XMLDOMStringList = __nccwpck_require__(1166);
 
   module.exports = XMLDOMConfiguration = (function() {
     function XMLDOMConfiguration() {
@@ -12307,7 +12304,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 6744:
+/***/ 3708:
 /***/ (function(module) {
 
 // Generated by CoffeeScript 1.12.7
@@ -12330,7 +12327,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 8310:
+/***/ 9921:
 /***/ (function(module) {
 
 // Generated by CoffeeScript 1.12.7
@@ -12369,7 +12366,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 7028:
+/***/ 1166:
 /***/ (function(module) {
 
 // Generated by CoffeeScript 1.12.7
@@ -12404,7 +12401,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 1015:
+/***/ 2253:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -12413,9 +12410,9 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  XMLNode = __nccwpck_require__(7608);
+  XMLNode = __nccwpck_require__(956);
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
   module.exports = XMLDTDAttList = (function(superClass) {
     extend(XMLDTDAttList, superClass);
@@ -12466,7 +12463,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 2421:
+/***/ 3387:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -12475,9 +12472,9 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  XMLNode = __nccwpck_require__(7608);
+  XMLNode = __nccwpck_require__(956);
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
   module.exports = XMLDTDElement = (function(superClass) {
     extend(XMLDTDElement, superClass);
@@ -12511,7 +12508,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 53:
+/***/ 2783:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -12520,11 +12517,11 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  isObject = (__nccwpck_require__(8229).isObject);
+  isObject = (__nccwpck_require__(5060).isObject);
 
-  XMLNode = __nccwpck_require__(7608);
+  XMLNode = __nccwpck_require__(956);
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
   module.exports = XMLDTDEntity = (function(superClass) {
     extend(XMLDTDEntity, superClass);
@@ -12615,7 +12612,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 2837:
+/***/ 4545:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -12624,9 +12621,9 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  XMLNode = __nccwpck_require__(7608);
+  XMLNode = __nccwpck_require__(956);
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
   module.exports = XMLDTDNotation = (function(superClass) {
     extend(XMLDTDNotation, superClass);
@@ -12674,7 +12671,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 6364:
+/***/ 7800:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -12683,11 +12680,11 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  isObject = (__nccwpck_require__(8229).isObject);
+  isObject = (__nccwpck_require__(5060).isObject);
 
-  XMLNode = __nccwpck_require__(7608);
+  XMLNode = __nccwpck_require__(956);
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
   module.exports = XMLDeclaration = (function(superClass) {
     extend(XMLDeclaration, superClass);
@@ -12724,7 +12721,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 1801:
+/***/ 8949:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -12733,21 +12730,21 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  isObject = (__nccwpck_require__(8229).isObject);
+  isObject = (__nccwpck_require__(5060).isObject);
 
-  XMLNode = __nccwpck_require__(7608);
+  XMLNode = __nccwpck_require__(956);
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
-  XMLDTDAttList = __nccwpck_require__(1015);
+  XMLDTDAttList = __nccwpck_require__(2253);
 
-  XMLDTDEntity = __nccwpck_require__(53);
+  XMLDTDEntity = __nccwpck_require__(2783);
 
-  XMLDTDElement = __nccwpck_require__(2421);
+  XMLDTDElement = __nccwpck_require__(3387);
 
-  XMLDTDNotation = __nccwpck_require__(2837);
+  XMLDTDNotation = __nccwpck_require__(4545);
 
-  XMLNamedNodeMap = __nccwpck_require__(4361);
+  XMLNamedNodeMap = __nccwpck_require__(7487);
 
   module.exports = XMLDocType = (function(superClass) {
     extend(XMLDocType, superClass);
@@ -12917,7 +12914,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 3730:
+/***/ 8368:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -12926,19 +12923,19 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  isPlainObject = (__nccwpck_require__(8229).isPlainObject);
+  isPlainObject = (__nccwpck_require__(5060).isPlainObject);
 
-  XMLDOMImplementation = __nccwpck_require__(8310);
+  XMLDOMImplementation = __nccwpck_require__(9921);
 
-  XMLDOMConfiguration = __nccwpck_require__(7465);
+  XMLDOMConfiguration = __nccwpck_require__(137);
 
-  XMLNode = __nccwpck_require__(7608);
+  XMLNode = __nccwpck_require__(956);
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
-  XMLStringifier = __nccwpck_require__(8594);
+  XMLStringifier = __nccwpck_require__(4669);
 
-  XMLStringWriter = __nccwpck_require__(5913);
+  XMLStringWriter = __nccwpck_require__(2225);
 
   module.exports = XMLDocument = (function(superClass) {
     extend(XMLDocument, superClass);
@@ -13166,7 +13163,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 7356:
+/***/ 2212:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -13174,43 +13171,43 @@ exports["default"] = _default;
   var NodeType, WriterState, XMLAttribute, XMLCData, XMLComment, XMLDTDAttList, XMLDTDElement, XMLDTDEntity, XMLDTDNotation, XMLDeclaration, XMLDocType, XMLDocument, XMLDocumentCB, XMLElement, XMLProcessingInstruction, XMLRaw, XMLStringWriter, XMLStringifier, XMLText, getValue, isFunction, isObject, isPlainObject, ref,
     hasProp = {}.hasOwnProperty;
 
-  ref = __nccwpck_require__(8229), isObject = ref.isObject, isFunction = ref.isFunction, isPlainObject = ref.isPlainObject, getValue = ref.getValue;
+  ref = __nccwpck_require__(5060), isObject = ref.isObject, isFunction = ref.isFunction, isPlainObject = ref.isPlainObject, getValue = ref.getValue;
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
-  XMLDocument = __nccwpck_require__(3730);
+  XMLDocument = __nccwpck_require__(8368);
 
-  XMLElement = __nccwpck_require__(9437);
+  XMLElement = __nccwpck_require__(7124);
 
-  XMLCData = __nccwpck_require__(333);
+  XMLCData = __nccwpck_require__(9721);
 
-  XMLComment = __nccwpck_require__(4407);
+  XMLComment = __nccwpck_require__(2645);
 
-  XMLRaw = __nccwpck_require__(6329);
+  XMLRaw = __nccwpck_require__(6140);
 
-  XMLText = __nccwpck_require__(1318);
+  XMLText = __nccwpck_require__(4228);
 
-  XMLProcessingInstruction = __nccwpck_require__(6939);
+  XMLProcessingInstruction = __nccwpck_require__(4673);
 
-  XMLDeclaration = __nccwpck_require__(6364);
+  XMLDeclaration = __nccwpck_require__(7800);
 
-  XMLDocType = __nccwpck_require__(1801);
+  XMLDocType = __nccwpck_require__(8949);
 
-  XMLDTDAttList = __nccwpck_require__(1015);
+  XMLDTDAttList = __nccwpck_require__(2253);
 
-  XMLDTDEntity = __nccwpck_require__(53);
+  XMLDTDEntity = __nccwpck_require__(2783);
 
-  XMLDTDElement = __nccwpck_require__(2421);
+  XMLDTDElement = __nccwpck_require__(3387);
 
-  XMLDTDNotation = __nccwpck_require__(2837);
+  XMLDTDNotation = __nccwpck_require__(4545);
 
-  XMLAttribute = __nccwpck_require__(8376);
+  XMLAttribute = __nccwpck_require__(3281);
 
-  XMLStringifier = __nccwpck_require__(8594);
+  XMLStringifier = __nccwpck_require__(4669);
 
-  XMLStringWriter = __nccwpck_require__(5913);
+  XMLStringWriter = __nccwpck_require__(2225);
 
-  WriterState = __nccwpck_require__(9766);
+  WriterState = __nccwpck_require__(6838);
 
   module.exports = XMLDocumentCB = (function() {
     function XMLDocumentCB(options, onData, onEnd) {
@@ -13701,7 +13698,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 3590:
+/***/ 768:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -13710,9 +13707,9 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  XMLNode = __nccwpck_require__(7608);
+  XMLNode = __nccwpck_require__(956);
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
   module.exports = XMLDummy = (function(superClass) {
     extend(XMLDummy, superClass);
@@ -13739,7 +13736,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 9437:
+/***/ 7124:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -13748,15 +13745,15 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  ref = __nccwpck_require__(8229), isObject = ref.isObject, isFunction = ref.isFunction, getValue = ref.getValue;
+  ref = __nccwpck_require__(5060), isObject = ref.isObject, isFunction = ref.isFunction, getValue = ref.getValue;
 
-  XMLNode = __nccwpck_require__(7608);
+  XMLNode = __nccwpck_require__(956);
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
-  XMLAttribute = __nccwpck_require__(8376);
+  XMLAttribute = __nccwpck_require__(3281);
 
-  XMLNamedNodeMap = __nccwpck_require__(4361);
+  XMLNamedNodeMap = __nccwpck_require__(7487);
 
   module.exports = XMLElement = (function(superClass) {
     extend(XMLElement, superClass);
@@ -14044,7 +14041,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 4361:
+/***/ 7487:
 /***/ (function(module) {
 
 // Generated by CoffeeScript 1.12.7
@@ -14109,7 +14106,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 7608:
+/***/ 956:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -14117,7 +14114,7 @@ exports["default"] = _default;
   var DocumentPosition, NodeType, XMLCData, XMLComment, XMLDeclaration, XMLDocType, XMLDummy, XMLElement, XMLNamedNodeMap, XMLNode, XMLNodeList, XMLProcessingInstruction, XMLRaw, XMLText, getValue, isEmpty, isFunction, isObject, ref1,
     hasProp = {}.hasOwnProperty;
 
-  ref1 = __nccwpck_require__(8229), isObject = ref1.isObject, isFunction = ref1.isFunction, isEmpty = ref1.isEmpty, getValue = ref1.getValue;
+  ref1 = __nccwpck_require__(5060), isObject = ref1.isObject, isFunction = ref1.isFunction, isEmpty = ref1.isEmpty, getValue = ref1.getValue;
 
   XMLElement = null;
 
@@ -14156,19 +14153,19 @@ exports["default"] = _default;
       this.children = [];
       this.baseURI = null;
       if (!XMLElement) {
-        XMLElement = __nccwpck_require__(9437);
-        XMLCData = __nccwpck_require__(333);
-        XMLComment = __nccwpck_require__(4407);
-        XMLDeclaration = __nccwpck_require__(6364);
-        XMLDocType = __nccwpck_require__(1801);
-        XMLRaw = __nccwpck_require__(6329);
-        XMLText = __nccwpck_require__(1318);
-        XMLProcessingInstruction = __nccwpck_require__(6939);
-        XMLDummy = __nccwpck_require__(3590);
-        NodeType = __nccwpck_require__(9267);
-        XMLNodeList = __nccwpck_require__(6768);
-        XMLNamedNodeMap = __nccwpck_require__(4361);
-        DocumentPosition = __nccwpck_require__(2839);
+        XMLElement = __nccwpck_require__(7124);
+        XMLCData = __nccwpck_require__(9721);
+        XMLComment = __nccwpck_require__(2645);
+        XMLDeclaration = __nccwpck_require__(7800);
+        XMLDocType = __nccwpck_require__(8949);
+        XMLRaw = __nccwpck_require__(6140);
+        XMLText = __nccwpck_require__(4228);
+        XMLProcessingInstruction = __nccwpck_require__(4673);
+        XMLDummy = __nccwpck_require__(768);
+        NodeType = __nccwpck_require__(2370);
+        XMLNodeList = __nccwpck_require__(6866);
+        XMLNamedNodeMap = __nccwpck_require__(7487);
+        DocumentPosition = __nccwpck_require__(9439);
       }
     }
 
@@ -14901,7 +14898,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 6768:
+/***/ 6866:
 /***/ (function(module) {
 
 // Generated by CoffeeScript 1.12.7
@@ -14936,7 +14933,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 6939:
+/***/ 4673:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -14945,9 +14942,9 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
-  XMLCharacterData = __nccwpck_require__(7709);
+  XMLCharacterData = __nccwpck_require__(434);
 
   module.exports = XMLProcessingInstruction = (function(superClass) {
     extend(XMLProcessingInstruction, superClass);
@@ -14992,7 +14989,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 6329:
+/***/ 6140:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -15001,9 +14998,9 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
-  XMLNode = __nccwpck_require__(7608);
+  XMLNode = __nccwpck_require__(956);
 
   module.exports = XMLRaw = (function(superClass) {
     extend(XMLRaw, superClass);
@@ -15034,7 +15031,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 8601:
+/***/ 4018:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -15043,11 +15040,11 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
-  XMLWriterBase = __nccwpck_require__(6752);
+  XMLWriterBase = __nccwpck_require__(8361);
 
-  WriterState = __nccwpck_require__(9766);
+  WriterState = __nccwpck_require__(6838);
 
   module.exports = XMLStreamWriter = (function(superClass) {
     extend(XMLStreamWriter, superClass);
@@ -15217,7 +15214,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 5913:
+/***/ 2225:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -15226,7 +15223,7 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  XMLWriterBase = __nccwpck_require__(6752);
+  XMLWriterBase = __nccwpck_require__(8361);
 
   module.exports = XMLStringWriter = (function(superClass) {
     extend(XMLStringWriter, superClass);
@@ -15259,7 +15256,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 8594:
+/***/ 4669:
 /***/ (function(module) {
 
 // Generated by CoffeeScript 1.12.7
@@ -15506,7 +15503,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 1318:
+/***/ 4228:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -15515,9 +15512,9 @@ exports["default"] = _default;
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
-  XMLCharacterData = __nccwpck_require__(7709);
+  XMLCharacterData = __nccwpck_require__(434);
 
   module.exports = XMLText = (function(superClass) {
     extend(XMLText, superClass);
@@ -15582,7 +15579,7 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 6752:
+/***/ 8361:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
@@ -15590,37 +15587,37 @@ exports["default"] = _default;
   var NodeType, WriterState, XMLCData, XMLComment, XMLDTDAttList, XMLDTDElement, XMLDTDEntity, XMLDTDNotation, XMLDeclaration, XMLDocType, XMLDummy, XMLElement, XMLProcessingInstruction, XMLRaw, XMLText, XMLWriterBase, assign,
     hasProp = {}.hasOwnProperty;
 
-  assign = (__nccwpck_require__(8229).assign);
+  assign = (__nccwpck_require__(5060).assign);
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
-  XMLDeclaration = __nccwpck_require__(6364);
+  XMLDeclaration = __nccwpck_require__(7800);
 
-  XMLDocType = __nccwpck_require__(1801);
+  XMLDocType = __nccwpck_require__(8949);
 
-  XMLCData = __nccwpck_require__(333);
+  XMLCData = __nccwpck_require__(9721);
 
-  XMLComment = __nccwpck_require__(4407);
+  XMLComment = __nccwpck_require__(2645);
 
-  XMLElement = __nccwpck_require__(9437);
+  XMLElement = __nccwpck_require__(7124);
 
-  XMLRaw = __nccwpck_require__(6329);
+  XMLRaw = __nccwpck_require__(6140);
 
-  XMLText = __nccwpck_require__(1318);
+  XMLText = __nccwpck_require__(4228);
 
-  XMLProcessingInstruction = __nccwpck_require__(6939);
+  XMLProcessingInstruction = __nccwpck_require__(4673);
 
-  XMLDummy = __nccwpck_require__(3590);
+  XMLDummy = __nccwpck_require__(768);
 
-  XMLDTDAttList = __nccwpck_require__(1015);
+  XMLDTDAttList = __nccwpck_require__(2253);
 
-  XMLDTDElement = __nccwpck_require__(2421);
+  XMLDTDElement = __nccwpck_require__(3387);
 
-  XMLDTDEntity = __nccwpck_require__(53);
+  XMLDTDEntity = __nccwpck_require__(2783);
 
-  XMLDTDNotation = __nccwpck_require__(2837);
+  XMLDTDNotation = __nccwpck_require__(4545);
 
-  WriterState = __nccwpck_require__(9766);
+  WriterState = __nccwpck_require__(6838);
 
   module.exports = XMLWriterBase = (function() {
     function XMLWriterBase(options) {
@@ -16017,28 +16014,28 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ 2958:
+/***/ 255:
 /***/ (function(module, __unused_webpack_exports, __nccwpck_require__) {
 
 // Generated by CoffeeScript 1.12.7
 (function() {
   var NodeType, WriterState, XMLDOMImplementation, XMLDocument, XMLDocumentCB, XMLStreamWriter, XMLStringWriter, assign, isFunction, ref;
 
-  ref = __nccwpck_require__(8229), assign = ref.assign, isFunction = ref.isFunction;
+  ref = __nccwpck_require__(5060), assign = ref.assign, isFunction = ref.isFunction;
 
-  XMLDOMImplementation = __nccwpck_require__(8310);
+  XMLDOMImplementation = __nccwpck_require__(9921);
 
-  XMLDocument = __nccwpck_require__(3730);
+  XMLDocument = __nccwpck_require__(8368);
 
-  XMLDocumentCB = __nccwpck_require__(7356);
+  XMLDocumentCB = __nccwpck_require__(2212);
 
-  XMLStringWriter = __nccwpck_require__(5913);
+  XMLStringWriter = __nccwpck_require__(2225);
 
-  XMLStreamWriter = __nccwpck_require__(8601);
+  XMLStreamWriter = __nccwpck_require__(4018);
 
-  NodeType = __nccwpck_require__(9267);
+  NodeType = __nccwpck_require__(2370);
 
-  WriterState = __nccwpck_require__(9766);
+  WriterState = __nccwpck_require__(6838);
 
   module.exports.create = function(name, xmldec, doctype, options) {
     var doc, root;
@@ -16237,7 +16234,7 @@ module.exports = require("zlib");
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@alicloud/pop-core","version":"1.7.12","description":"AliCloud POP SDK core","main":"index.js","types":"lib/rpc.d.ts","scripts":{"lint":"eslint --fix lib test","test":"mocha -R spec test/*.test.js","test-cov":"nyc -r=html -r=text -r=lcov mocha -t 3000 -R spec test/*.test.js","test-integration":"mocha -R spec test/*.integration.js","ci":"npm run lint && npm run test-cov && codecov"},"keywords":["Aliyun","AliCloud","OpenAPI","POP","SDK","Core"],"author":"Jackson Tian","license":"MIT","dependencies":{"debug":"^3.1.0","httpx":"^2.1.2","json-bigint":"^1.0.0","kitx":"^1.2.1","xml2js":"^0.4.17"},"files":["lib","index.js"],"devDependencies":{"codecov":"^3.0.4","eslint":"^6.6.0","expect.js":"^0.3.1","mocha":"^4","muk":"^0.5.3","nyc":"^12.0.2","rewire":"^4.0.1"},"directories":{"test":"test"},"repository":{"type":"git","url":"git+https://github.com/aliyun/openapi-core-nodejs-sdk.git"},"bugs":{"url":"https://github.com/aliyun/openapi-core-nodejs-sdk/issues"},"homepage":"https://github.com/aliyun/openapi-core-nodejs-sdk#readme"}');
+module.exports = JSON.parse('{"name":"@alicloud/pop-core","version":"1.7.13","description":"AliCloud POP SDK core","main":"index.js","types":"lib/rpc.d.ts","scripts":{"lint":"eslint --fix lib test","test":"mocha -R spec test/*.test.js","test-cov":"nyc -r=html -r=text -r=lcov mocha -t 3000 -R spec test/*.test.js","test-integration":"mocha -R spec test/*.integration.js","ci":"npm run lint && npm run test-cov && codecov"},"keywords":["Aliyun","AliCloud","OpenAPI","POP","SDK","Core"],"author":"Jackson Tian","license":"MIT","dependencies":{"debug":"^3.1.0","httpx":"^2.1.2","json-bigint":"^1.0.0","kitx":"^1.2.1","xml2js":"^0.5.0"},"files":["lib","index.js"],"devDependencies":{"codecov":"^3.0.4","eslint":"^6.6.0","expect.js":"^0.3.1","mocha":"^4","muk":"^0.5.3","nyc":"^12.0.2","rewire":"^4.0.1"},"directories":{"test":"test"},"engines":{"node":">=8.0.0"},"repository":{"type":"git","url":"git+https://github.com/aliyun/openapi-core-nodejs-sdk.git"},"bugs":{"url":"https://github.com/aliyun/openapi-core-nodejs-sdk/issues"},"homepage":"https://github.com/aliyun/openapi-core-nodejs-sdk#readme"}');
 
 /***/ })
 
@@ -16282,31 +16279,42 @@ module.exports = JSON.parse('{"name":"@alicloud/pop-core","version":"1.7.12","de
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-const core = __nccwpck_require__(2186);
+const core = __nccwpck_require__(8864);
 
 const path = __nccwpck_require__(1017);
 const fs = __nccwpck_require__(7147);
-const ROAClient = (__nccwpck_require__(8634).ROAClient);
+const ROAClient = (__nccwpck_require__(7730).ROAClient);
+const popCore = __nccwpck_require__(7730);
+
 
 
 const APIEndpoint = `https://cs.aliyuncs.com`
+const APIEndpointAdcp = 'https://adcp.aliyuncs.com'
+
 
 async function run() {
     let accessKeyId = core.getInput('access-key-id', { required: true });
     let accessKeySecret = core.getInput('access-key-secret', { required: true });
     let securityToken = core.getInput('security-token', { required: false });
     let clusterId = core.getInput('cluster-id', { required: false });
+    let clusterType = core.getInput('cluster-type', { required: false });
 
     try {
-        let client = new ROAClient({
-            accessKeyId,
-            accessKeySecret,
-            securityToken,
-            endpoint: APIEndpoint,
-            apiVersion: '2015-12-15'
-        });
-        let result = await requestWithRetry(client, 'GET', `/k8s/${clusterId}/user_config`)
-        let kubeconfig = result.config
+        let kubeconfig = ""
+        if (clusterType === "ackone") { // get ACK One Hub Cluster kubeconfig
+            kubeconfig = await getAckOneHubKubeconfig(accessKeyId, accessKeySecret, securityToken, APIEndpointAdcp, clusterId)
+        } else { // get ACK Cluster kubeconfig
+            let client = new ROAClient({
+                accessKeyId,
+                accessKeySecret,
+                securityToken,
+                endpoint: APIEndpoint,
+                apiVersion: '2015-12-15'
+            });
+            let result = await requestWithRetry(client, 'GET', `/k8s/${clusterId}/user_config`)
+            kubeconfig = result.config
+        }
+
         const runnerTempDirectory = process.env['RUNNER_TEMP']; // Using process.env until the core libs are updated
         const kubeconfigPath = path.join(runnerTempDirectory, `kubeconfig_${Date.now()}`);
         core.debug(`Writing kubeconfig contents to ${kubeconfigPath}`);
@@ -16333,10 +16341,44 @@ async function requestWithRetry(client, method, path, retries = 3, retryDelay = 
 	}
 }
 
+async function getAckOneHubKubeconfig(accessKeyId, accessKeySecret, securityToken, apiEndpoint, clusterId) {
+    let client = new popCore({
+        accessKeyId: accessKeyId,
+        accessKeySecret: accessKeySecret,
+        securityToken: securityToken,
+        endpoint: apiEndpoint,
+        apiVersion: '2022-01-01'
+    });
+
+    let params = {
+        ClusterId: clusterId,
+    }
+    let requestOption = {
+        method: 'POST',
+        formatParams: false,
+    };
+
+    let result = await requestActionWithRetry(client, 'DescribeHubClusterKubeconfig', params, requestOption)
+    return result.Kubeconfig
+}
+
+async function requestActionWithRetry(client, action, params, requestOption, retries = 3, retryDelay = 1000) {
+    try {
+        return await client.request(action, params, requestOption);
+    } catch (err) {
+        if (retries > 0) {
+            core.info(`Retrying after ${retryDelay}ms...`);
+            await new Promise(resolve => setTimeout(resolve, retryDelay));
+            return await requestActionWithRetry(client, action, params, requestOption,retries - 1, retryDelay * 2);
+        } else {
+            throw err;
+        }
+    }
+}
+
 run();
 })();
 
 module.exports = __webpack_exports__;
 /******/ })()
 ;
-//# sourceMappingURL=index.js.map
