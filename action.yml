@@ -1,6 +1,9 @@
 name: 'Setting context for Kubernetes cluster of Alibaba Cloud Kubernetes Service (ACK)'
 description: 'Setting context for Kubernetes cluster of Alibaba Cloud Kubernetes Service (ACK)'
-inputs: 
+inputs:
+  cluster-type:
+    description: 'Cluster type. "ACK" or "One"'
+    required: false
   access-key-id:
     description: 'Access key id for Alibaba Cloud'
     required: true
