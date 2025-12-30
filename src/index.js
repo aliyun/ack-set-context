@@ -17,20 +17,32 @@ async function run() {
     let securityToken = core.getInput('security-token', { required: false });
     let clusterId = core.getInput('cluster-id', { required: false });
     let clusterType = core.getInput('cluster-type', { required: false });
+    let privateIpAddress = core.getBooleanInput('private-ip-address', { required: false });
+    let apiEndpoint = core.getInput('api-endpoint', { required: false });
 
     try {
         let kubeconfig = ""
         if (clusterType.toLocaleLowerCase() === "one") { // get ACK One Hub Cluster kubeconfig
-            kubeconfig = await getAckOneHubKubeconfig(accessKeyId, accessKeySecret, securityToken, APIEndpointAdcp, clusterId)
+            const endpointOne = apiEndpoint || APIEndpointAdcp;
+            core.info(`Using endpoint: ${endpointOne}`);
+            kubeconfig = await getAckOneHubKubeconfig(accessKeyId, accessKeySecret, securityToken, 
+                endpointOne, clusterId, privateIpAddress)
         } else { // get ACK Cluster kubeconfig
+            const endpointAck = apiEndpoint || APIEndpoint;
+            core.info(`Using endpoint: ${endpointAck}`);
             let client = new ROAClient({
                 accessKeyId,
                 accessKeySecret,
                 securityToken,
-                endpoint: APIEndpoint,
+                endpoint: endpointAck,
                 apiVersion: '2015-12-15'
             });
-            let result = await requestWithRetry(client, 'GET', `/k8s/${clusterId}/user_config`)
+            let query = {};
+            if (privateIpAddress) {
+                query.PrivateIpAddress = true;
+            }
+            core.info(`Using query: ${JSON.stringify(query)}`);
+            let result = await requestWithRetry(client, 'GET', `/k8s/${clusterId}/user_config`, query)
             kubeconfig = result.config
         }
 
@@ -46,21 +58,21 @@ async function run() {
     }
 }
 
-async function requestWithRetry(client, method, path, retries = 3, retryDelay = 1000) {
+async function requestWithRetry(client, method, path, query = {}, retries = 3, retryDelay = 1000) {
 	try {
-		return await client.request(method, path);
+		return await client.request(method, path, query);
 	} catch (err) {
 		if (retries > 0) {
 			core.info(`Retrying after ${retryDelay}ms...`);
 			await new Promise(resolve => setTimeout(resolve, retryDelay));
-			return await requestWithRetry(client, method, path, retries - 1, retryDelay * 2);
+			return await requestWithRetry(client, method, path, query, retries - 1, retryDelay * 2);
 		} else {
 			throw err;
 		}
 	}
 }
 
-async function getAckOneHubKubeconfig(accessKeyId, accessKeySecret, securityToken, apiEndpoint, clusterId) {
+async function getAckOneHubKubeconfig(accessKeyId, accessKeySecret, securityToken, apiEndpoint, clusterId, privateIpAddress) {
     let client = new popCore({
         accessKeyId: accessKeyId,
         accessKeySecret: accessKeySecret,
@@ -71,6 +83,10 @@ async function getAckOneHubKubeconfig(accessKeyId, accessKeySecret, securityToke
 
     let params = {
         ClusterId: clusterId,
+    }
+    if (privateIpAddress) {
+        params.PrivateIpAddress = true;
+        core.info('Using private IP address');
     }
     let requestOption = {
         method: 'POST',
