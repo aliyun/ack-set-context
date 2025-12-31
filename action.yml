@@ -3,6 +3,7 @@ description: 'Setting context for Kubernetes cluster of Alibaba Cloud Kubernetes
 inputs:
   cluster-type:
     description: 'Cluster type. "ACK" or "One"'
+    default: 'ACK'
     required: false
   access-key-id:
     description: 'Access key id for Alibaba Cloud'
@@ -17,6 +18,14 @@ inputs:
   cluster-id:
     description: 'Kubernetes cluster id'
     required: true
+  private-ip-address:
+    description: 'Specifies whether the API server address in generated kubeconfig is a private (intranet) address'
+    default: 'false'
+    required: false
+  api-endpoint:
+    description: 'The endpoint of the OpenAPI of Alibaba Cloud. e.g. `https://cs.aliyuncs.com` for ACK, `https://adcp.aliyuncs.com` for ACK One'
+    default: ''
+    required: false
 branding:
   color: 'orange'
   icon: 'compass'
