@@ -14,9 +14,11 @@ Set the ```KUBECONFIG``` environment variable by cluster id for K8s cluster mana
     cluster-type: '<cluster type>'
     ## if cluster-type is 'One', please filling up ACK One Fleet cluster id
     cluster-id: '<cluster id>'
-    ## optional, whether the API server address in generated kubeconfig is a private (intranet) address; default is 'false'
+    ## optional, whether the API server address in generated kubeconfig
+    ## is a private (intranet) address; default is 'false'
     private-ip-address: '<true|false>'
-    ## optional, OpenAPI endpoint, e.g. https://cs.cn-hangzhou.aliyuncs.com (ACK) or https://adcp.aliyuncs.com (ACK One)
+    ## optional, OpenAPI endpoint, e.g. https://cs.cn-hangzhou.aliyuncs.com (ACK) or
+    ## https://adcp.aliyuncs.com (ACK One)
     api-endpoint: '<endpoint>'
 ```
 
