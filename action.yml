@@ -19,7 +19,7 @@ inputs:
     description: 'Kubernetes cluster id'
     required: true
   private-ip-address:
-    description: 'Specifies whether to obtain the kubeconfig file that is used to connect to the cluster over the internal network'
+    description: 'Specifies whether the API server address in generated kubeconfig is a private (intranet) address'
     default: 'false'
     required: false
   api-endpoint:
